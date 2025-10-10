@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-md">
+    <!-- Accordion Item 1 -->
+    <div class="border-b">
+      <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-700 hover:bg-gray-50 accordion-header">
+        <span>What is Tailwind CSS?</span>
+        <svg class="w-5 h-5 transition-transform duration-200 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300">
+        <p class="p-4 text-gray-600">Tailwind CSS is a utility-first CSS framework that lets you build modern designs without leaving your HTML.</p>
+      </div>
+    </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="border-b">
+      <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-700 hover:bg-gray-50 accordion-header">
+        <span>How does it work?</span>
+        <svg class="w-5 h-5 transition-transform duration-200 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300">
+        <p class="p-4 text-gray-600">You style elements by applying pre-made utility classes directly in your HTML markup.</p>
+      </div>
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div>
+      <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-700 hover:bg-gray-50 accordion-header">
+        <span>Is it customizable?</span>
+        <svg class="w-5 h-5 transition-transform duration-200 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="accordion-body max-h-0 overflow-hidden transition-all duration-300">
+        <p class="p-4 text-gray-600">Yes! You can extend and configure Tailwind to match your project’s design system.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(button => {
+      button.addEventListener('click', () => {
+        const body = button.nextElementSibling;
+        const icon = button.querySelector('.accordion-icon');
+
+        if (body.classList.contains('max-h-0')) {
+          // Close all other accordions
+          document.querySelectorAll('.accordion-body').forEach(b => {
+            b.style.maxHeight = null;
+            b.classList.add('max-h-0');
+          });
+          document.querySelectorAll('.accordion-icon').forEach(i => {
+            i.classList.remove('rotate-180');
+          });
+
+          // Open this one
+          body.classList.remove('max-h-0');
+          body.style.maxHeight = body.scrollHeight + "px";
+          icon.classList.add('rotate-180');
+        } else {
+          body.style.maxHeight = null;
+          body.classList.add('max-h-0');
+          icon.classList.remove('rotate-180');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
