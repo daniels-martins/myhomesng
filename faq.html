@@ -60,7 +60,6 @@
   </nav>
 
 
-
   <header class="my-20 text-3xl font-extrabold leading-none tracking-tight text-[#292766] text-center text-5xl">
     Frequently Asked Questions
   </header>
@@ -85,19 +84,19 @@
     <!-- Tabs -->
     <div class="grid grid-cols-1 lg:flex justify-between w-full gap-4">
       <button
-        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
         data-tab="general">General</button>
       <button
-        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
         data-tab="landlord">Landlord</button>
       <button
-        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
         data-tab="agent">Agent</button>
       <button
-        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
         data-tab="customers">Customers</button>
       <button
-        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+        class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
         data-tab="estate">Estate &amp; Management</button>
     </div>
 
@@ -332,11 +331,11 @@
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         tabButtons.forEach(b => {
-          b.classList.remove('bg-[#D4cece]', 'text-black');
+          b.classList.remove('bg-[#F3F3FF]', 'text-black'); //formerly #D4cece for bg-gray
           b.classList.add('bg-[#292766]', 'text-white');
         });
-        btn.classList.remove('bg-[#292766]', 'text-white');
-        btn.classList.add('bg-[#D4cece]', 'text-black', 'border');
+        btn.classList.remove('bg-[#292766]', 'text-white');//formerly #D4cece for bg-gray
+        btn.classList.add('bg-[#F3F3FF]', 'text-black', 'border');
         tabContents.forEach(c => c.classList.add('hidden'));
         document.getElementById(btn.dataset.tab).classList.remove('hidden');
       });

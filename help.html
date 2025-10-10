@@ -12,74 +12,74 @@
 
 
 
-  <!-- NAVBAR -->
-  <nav class="bg-white border-b border-gray-200 shadow-sm fixed w-full z-20 top-0 left-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm fixed w-full z-20 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
 
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <span class="text-xl font-semibold text-indigo-600">
-            <img src="assets/my_homes_logo.png" class="w-100" alt="">
-          </span>
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl font-semibold text-indigo-600">
+                        <img src="assets/my_homes_logo.png" class="w-100" alt="">
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="faq.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Faq</a>
+                    <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">About Us</a>
+                    <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">Why Us</a>
+                    <a href="help.html">
+                        <button
+                            class="px-4 py-2 rounded-md bg-[#292766] transition active:translate-y-1 text-white hover:bg-[#292766] transition">Help</button>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="menu-btn"
+                    class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none group">
+                    <span class="block w-6 h-0.5 bg-gray-700 mb-1 transition-all duration-300"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700 mb-1 transition-all duration-300"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"></span>
+                </button>
+
+            </div>
         </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="faq.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Faq</a>
-          <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">About Us</a>
-          <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">Why Us</a>
-          <a href="help.html">
-            <button
-              class="px-4 py-2 rounded-md bg-[#292766] transition active:translate-y-1 text-white hover:bg-[#292766] transition">Help</button>
-          </a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 shadow-md">
+            <div class="px-4 py-4 flex flex-col space-y-3">
+                <a href="faq.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Faq</a>
+                <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">About Us</a>
+                <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">Why Us</a>
+                <a href="help.html">
+                    <button
+                        class="px-4 py-2 rounded-md bg-[#292766] transition active:translate-y-1 text-white hover:bg-[#292766] transition">Help</button>
+                </a>
+            </div>
         </div>
+    </nav>
 
-        <!-- Mobile Hamburger -->
-        <button id="menu-btn"
-          class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none group">
-          <span class="block w-6 h-0.5 bg-gray-700 mb-1 transition-all duration-300"></span>
-          <span class="block w-6 h-0.5 bg-gray-700 mb-1 transition-all duration-300"></span>
-          <span class="block w-6 h-0.5 bg-gray-700 transition-all duration-300"></span>
-        </button>
-
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 shadow-md">
-      <div class="px-4 py-4 flex flex-col space-y-3">
-       <a href="faq.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Faq</a>
-          <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">About Us</a>
-          <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">Why Us</a>
-          <a href="help.html">
-            <button
-              class="px-4 py-2 rounded-md bg-[#292766] transition active:translate-y-1 text-white hover:bg-[#292766] transition">Help</button>
-          </a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="w-full bg-[#292766] mt-20 py-3 text-white flex justify-center">Contact Us</div>
+    <div class="w-full bg-[#292766] mt-20 py-3 text-white flex justify-center">Contact Us</div>
 
     <!-- Tabs & Accordions -->
     <div class="max-w-5xl mx-auto mt-16 mb-40">
         <!-- Tabs -->
-    <div class="grid grid-cols-1 lg:flex justify-between w-full gap-4">
+        <div class="grid grid-cols-1 lg:flex justify-between w-full gap-4">
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
                 data-tab="general">General</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
                 data-tab="landlord">Landlord</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
                 data-tab="agent">Agent</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
                 data-tab="customers">Customers</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF]"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
                 data-tab="estate">Estate &amp; Management</button>
         </div>
 
@@ -324,11 +324,11 @@
         tabButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 tabButtons.forEach(b => {
-                    b.classList.remove('bg-[#D4cece]', 'text-black');
+                    b.classList.remove('bg-[#F3F3FF]', 'text-black'); //formerly #D4cece for bg-gray
                     b.classList.add('bg-[#292766]', 'text-white');
                 });
-                btn.classList.remove('bg-[#292766]', 'text-white');
-                btn.classList.add('bg-[#D4cece]', 'text-black', 'border');
+                btn.classList.remove('bg-[#292766]', 'text-white');//formerly #D4cece for bg-gray
+                btn.classList.add('bg-[#F3F3FF]', 'text-black', 'border');
                 tabContents.forEach(c => c.classList.add('hidden'));
                 document.getElementById(btn.dataset.tab).classList.remove('hidden');
             });
@@ -363,23 +363,23 @@
         });
     </script>
 
-     <!-- mobile menu -->
-  <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+    <!-- mobile menu -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
 
-      // Animate hamburger icon
-      const spans = menuBtn.querySelectorAll("span");
-      spans[0].classList.toggle("rotate-45");
-      spans[0].classList.toggle("translate-y-2");
-      spans[1].classList.toggle("opacity-0");
-      spans[2].classList.toggle("-rotate-45");
-      spans[2].classList.toggle("-translate-y-2");
-    });
-  </script>
+            // Animate hamburger icon
+            const spans = menuBtn.querySelectorAll("span");
+            spans[0].classList.toggle("rotate-45");
+            spans[0].classList.toggle("translate-y-2");
+            spans[1].classList.toggle("opacity-0");
+            spans[2].classList.toggle("-rotate-45");
+            spans[2].classList.toggle("-translate-y-2");
+        });
+    </script>
 
 </body>
 
