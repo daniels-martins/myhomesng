@@ -4,8 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Contact</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            /* Set Poppins as the base font */
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            /* Default (Regular) */
+        }
+
+        /* Examples of using different weights: */
+
+        .thin-text {
+            font-weight: 100;
+        }
+
+        h1 {
+            font-weight: 900;
+            /* Black */
+        }
+
+        h2 {
+            font-weight: 700;
+            /* Bold */
+        }
+
+        .semibold-callout {
+            font-weight: 600;
+        }
+
+        .medium-text {
+            font-weight: 500;
+        }
+
+        .light-text {
+            font-weight: 300;
+        }
+
+        .italic-text {
+            font-style: italic;
+            /* Will use the corresponding italic weight you imported */
+            font-weight: 400;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 min-h-screen py-10">
@@ -20,7 +69,7 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <span class="text-xl font-semibold text-indigo-600">
-                        <img src="assets/my_homes_logo.png" class="w-100" alt="">
+                        <img src="assets/my_homes_logo.png" class="w-100" alt="MyHomesNG Logo">
                     </span>
                 </div>
 
@@ -28,8 +77,8 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="faq.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Faq</a>
                     <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">About Us</a>
-                    <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">Why Us</a>
-                    <a href="help.html">
+                    <a href="contact-us.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Contact
+                        Us</a> <a href="help.html">
                         <button
                             class="px-4 py-2 rounded-md bg-[#292766] transition active:translate-y-1 text-white hover:bg-[#292766] transition">Help</button>
                     </a>
@@ -51,8 +100,8 @@
             <div class="px-4 py-4 flex flex-col space-y-3">
                 <a href="faq.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Faq</a>
                 <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">About Us</a>
-                <a href="#" class="capitalize text-gray-700 hover:text-indigo-600 transition">Why Us</a>
-                <a href="help.html">
+                <a href="contact-us.html" class="capitalize text-gray-700 hover:text-indigo-600 transition">Contact
+                    Us</a> <a href="help.html">
                     <button
                         class="px-4 py-2 rounded-md bg-[#292766] transition active:translate-y-1 text-white hover:bg-[#292766] transition">Help</button>
                 </a>
@@ -60,61 +109,107 @@
         </div>
     </nav>
 
-    <div class="w-full bg-[#292766] mt-20 py-3 text-white flex justify-center">Contact Us</div>
+    <div class="w-full bg-[#292766] mt-20 py-3 text-white flex justify-center text-3xl mb-10">Hi, how can we help</div>
+
+
+    <!-- Search -->
+    <div class="search-container w-full flex justify-center">
+        <div class="w-fit  flex justify-center relative">
+            <div class="search-icon-container absolute left-3 top-4">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.3707 1.888 11.112C0.63 9.85333 0.000667196 8.316 5.29101e-07 6.5C-0.000666138 4.684 0.628667 3.14667 1.888 1.888C3.14733 0.629333 4.68467 0 6.5 0C8.31533 0 9.853 0.629333 11.113 1.888C12.373 3.14667 13.002 4.684 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5633 8.81333 11.0007 7.75067 11 6.5C10.9993 5.24933 10.562 4.187 9.688 3.313C8.814 2.439 7.75133 2.00133 6.5 2C5.24867 1.99867 4.18633 2.43633 3.313 3.313C2.43967 4.18967 2.002 5.252 2 6.5C1.998 7.748 2.43567 8.81067 3.313 9.688C4.19033 10.5653 5.25267 11.0027 6.5 11Z"
+                        fill="#6A6A6A" />
+                </svg>
+            </div>
+            <input
+                class="block transition  placeholder:text-sm rounded-xl px-10 focus:outline-none focus:border-gray-500 py-3 bg-gray-50 border border-gray-300"
+                type="search" placeholder="search for keyword">
+        </div>
+    </div>
+
+
+    <header class="my-10 text-4xl  leading-none tracking-tight text-[#292766] text-center">
+        Frequently Asked Questions
+    </header>
+
 
     <!-- Tabs & Accordions -->
     <div class="max-w-5xl mx-auto mt-16 mb-40">
         <!-- Tabs -->
         <div class="grid grid-cols-1 lg:flex justify-between w-full gap-4">
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="general">General</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="landlord">Landlord</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="agent">Agent</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="customers">Customers</button>
             <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#C4C2FF] hover:text-black"
-                data-tab="estate">Estate &amp; Management</button>
+                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                data-tab="estate">Estate&nbsp;&amp;&nbsp;Communities</button>
         </div>
 
         <!-- Tab Content -->
         <div>
-            <!-- General Tab -->
-            <div class="tab-content hidden w-full flex justify-center" id="general">
-                <div class="space-y-4 my-10">
-                    <form action="" uname="general-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email" required>
-                            <!-- <input type="text" class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4" placeholder="Complaints" required> -->
+            <!-- Content Template -->
+            <div class="tab-content hidden w-full flex justify-center md:relative" id="general">
+                <div class="space-y-4 mb-10 md:mt-40">
+                    <!-- FAQ BUTTONS -->
+                    <div class="w-full mt-10 flex-1 flex justify-center lg:justify-end">
+                        <div id="estate_enquiry_button_left"
+                            class="md:absolute md:top-10 md:left-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
 
-                            <div class="mb-5">
-                                <label for="complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                    <!-- Complaint Category -->
-                                </label>
-                                <select id="complaint" name="complaint"
-                                    class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm">
-                                    <option value="">-- Select Complaint Type --</option>
-                                    <option value="maintenance">Maintenance Issue</option>
-                                    <option value="rent">Rent Dispute</option>
-                                    <option value="utility">Utility Problem (Water, Power, etc.)</option>
-                                    <option value="security">Security Concern</option>
-                                    <option value="noise">Noise Complaint</option>
-                                    <option value="neighbor">Neighbor Dispute</option>
-                                    <option value="fraud">Property Fraud or Misrepresentation</option>
-                                    <option value="contract">Contract Breach</option>
-                                    <option value="other">Other</option>
-                                </select>
+                        <div id="estate_enquiry_button_right"
+                            class="md:absolute md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
+                    </div>
+
+                    <div uname="general-contact-form">
+                        
+                        <div class="my-5 w-full">
+                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                                <p class="text-center">
+                                    We'd love to hear from you. Please fill out this form.
+                                </p>
+                            </div>
+                            
+                            <form class="w-full lg:min-w-[700px]">
+                        
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Organisation" required>
+
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Mobile Number" required>
                             </div>
 
                             <textarea
@@ -123,44 +218,73 @@
                             <input type="submit"
                                 class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
                                 value="Send" required>
+                        </form>
+
+                        <div class="text-center space-y-1 mt-10">
+                            <p class="text-[#292766]">Still have questions?</p>
+                            <p>
+                                Find the answers to them in our <a href="faq.html"
+                                    class="text-[#292766] font-bold">FAQ</a>
+                            </p>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
 
             <!-- landlord Tabs -->
-            <div class="tab-content hidden w-full flex justify-center" id="landlord">
-                <!-- <h2 class="text-xl font-semibold my-10">Landlord FAQs</h2> -->
+            <div class="tab-content hidden w-full flex justify-center md:relative" id="landlord">
+                <div class="space-y-4 mb-10 md:mt-40">
+                    <!-- FAQ BUTTONS -->
+                    <div class="w-full mt-10 flex-1 flex justify-center lg:justify-end">
+                        <div id="landlord_enquiry_button_left"
+                            class="md:absolute md:top-10 md:left-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
 
-                <div class="space-y-4 my-10">
-                    <form action="" uname="general-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email" required>
-                            <!-- <input type="text" class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4" placeholder="Complaints" required> -->
+                        <div id="landlord_enquiry_button_right"
+                            class="md:absolute md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
+                    </div>
 
-                            <div class="mb-5">
-                                <label for="landlord_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                    <!-- Landlord Complaint Category -->
-                                </label>
-                                <select id="landlord_complaint" name="landlord_complaint"
-                                    class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm">
-                                    <option value="">-- Select Complaint Type --</option>
-                                    <option value="tenant_damage">Tenant Property Damage</option>
-                                    <option value="late_payment">Late Rent Payment</option>
-                                    <option value="illegal_occupancy">Illegal Occupancy</option>
-                                    <option value="maintenance_refusal">Tenant Refusing Maintenance Access</option>
-                                    <option value="eviction_issue">Eviction Process Issue</option>
-                                    <option value="utility_bills">Unpaid Utility Bills</option>
-                                    <option value="noise_disturbance">Tenant Noise or Nuisance</option>
-                                    <option value="other">Other</option>
-                                </select>
+                    <div uname="landlord-contact-form">
+                        
+                        <div class="my-5 w-full">
+                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                                <p class="text-center">
+                                    We'd love to hear from you. Please fill out this form.
+                                </p>
+                            </div>
+                            
+                            <form class="w-full lg:min-w-[700px]">
+                        
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Organisation" required>
+
                             </div>
 
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Mobile Number" required>
+                            </div>
 
                             <textarea
                                 class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
@@ -168,46 +292,73 @@
                             <input type="submit"
                                 class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
                                 value="Send" required>
+                        </form>
+
+                        <div class="text-center space-y-1 mt-10">
+                            <p class="text-[#292766]">Still have questions?</p>
+                            <p>
+                                Find the answers to them in our <a href="faq.html"
+                                    class="text-[#292766] font-bold">FAQ</a>
+                            </p>
                         </div>
-                    </form>
+                    </div>
                 </div>
-
-
-
             </div>
 
             <!-- agent tab -->
-            <div class="tab-content hidden w-full flex justify-center" id="agent">
-                <!-- <h2 class="text-xl font-semibold my-10">Agent FAQs</h2> -->
+            <div class="tab-content hidden w-full flex justify-center md:relative" id="agent">
+                <div class="space-y-4 mb-10 md:mt-40">
+                    <!-- FAQ BUTTONS -->
+                    <div class="w-full mt-10 flex-1 flex justify-center lg:justify-end">
+                        <div id="agent_enquiry_button_left"
+                            class="md:absolute md:top-10 md:left-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
 
-                <div class="space-y-4 my-10">
-                    <form action="" uname="general-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email" required>
-                            <!-- <input type="text" class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4" placeholder="Complaints" required> -->
+                        <div id="agent_enquiry_button_right"
+                            class="md:absolute md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
+                    </div>
 
-                            <div class="mb-5">
-                                <label for="agent_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                    <!-- Agent Complaint Category -->
-                                </label>
-                                <select id="agent_complaint" name="agent_complaint"
-                                    class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm">
-                                    <option value="">-- Select Complaint Type --</option>
-                                    <option value="commission_dispute">Commission Dispute</option>
-                                    <option value="fraudulent_listing">Fraudulent or Fake Listing</option>
-                                    <option value="property_misrepresentation">Property Misrepresentation</option>
-                                    <option value="client_nonpayment">Client Non-payment</option>
-                                    <option value="landlord_conflict">Conflict with Landlord</option>
-                                    <option value="unethical_practice">Unethical Practices</option>
-                                    <option value="other">Other</option>
-                                </select>
+                    <div uname="agent-contact-form">
+                        
+                        <div class="my-5 w-full">
+                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                                <p class="text-center">
+                                    We'd love to hear from you. Please fill out this form.
+                                </p>
+                            </div>
+                            
+                            <form class="w-full lg:min-w-[700px]">
+                        
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Organisation" required>
+
                             </div>
 
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Mobile Number" required>
+                            </div>
 
                             <textarea
                                 class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
@@ -215,45 +366,74 @@
                             <input type="submit"
                                 class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
                                 value="Send" required>
+                        </form>
+
+                        <div class="text-center space-y-1 mt-10">
+                            <p class="text-[#292766]">Still have questions?</p>
+                            <p>
+                                Find the answers to them in our <a href="faq.html"
+                                    class="text-[#292766] font-bold">FAQ</a>
+                            </p>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
 
 
             <!-- customers -->
-            <div class="tab-content hidden w-full flex justify-center" id="customers">
-                <!-- <h2 class="text-xl font-semibold my-10">Customer FAQs</h2> -->
+            <div class="tab-content hidden w-full flex justify-center md:relative" id="customers">
+                <div class="space-y-4 mb-10 md:mt-40">
+                    <!-- FAQ BUTTONS -->
+                    <div class="w-full mt-10 flex-1 flex justify-center lg:justify-end">
+                        <div id="customer_enquiry_button_left"
+                            class="md:absolute md:top-10 md:left-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
 
-                <div class="space-y-4 my-10">
-                    <form action="" uname="general-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email" required>
-                            <!-- <input type="text" class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4" placeholder="Complaints" required> -->
+                        <div id="customer_enquiry_button_right"
+                            class="md:absolute md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
+                    </div>
 
-                            <div class="mb-5">
-                                <label for="customer_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                    <!-- Customer Complaint Category -->
-                                </label>
-                                <select id="customer_complaint" name="customer_complaint"
-                                    class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm">
-                                    <option value="">-- Select Complaint Type --</option>
-                                    <option value="high_rent">Unjustified Rent Increase</option>
-                                    <option value="maintenance_issue">Unresolved Maintenance Issue</option>
-                                    <option value="agent_fraud">Fraudulent Agent or Payment</option>
-                                    <option value="contract_violation">Landlord Contract Violation</option>
-                                    <option value="deposit_refund">Unreturned Security Deposit</option>
-                                    <option value="harassment">Landlord or Neighbor Harassment</option>
-                                    <option value="poor_facility">Poor Facility Condition</option>
-                                    <option value="other">Other</option>
-                                </select>
+                    <div uname="customer-contact-form">
+                        
+                        <div class="my-5 w-full">
+                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                                <p class="text-center">
+                                    We'd love to hear from you. Please fill out this form.
+                                </p>
+                            </div>
+                            
+                            <form class="w-full lg:min-w-[700px]">
+                        
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Organisation" required>
+
                             </div>
 
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Mobile Number" required>
+                            </div>
 
                             <textarea
                                 class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
@@ -261,46 +441,74 @@
                             <input type="submit"
                                 class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
                                 value="Send" required>
-                        </div>
-                    </form>
-                </div>
+                        </form>
 
+                        <div class="text-center space-y-1 mt-10">
+                            <p class="text-[#292766]">Still have questions?</p>
+                            <p>
+                                Find the answers to them in our <a href="faq.html"
+                                    class="text-[#292766] font-bold">FAQ</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- estate mgt -->
 
-            <div class="tab-content hidden w-full flex justify-center" id="estate">
-                <!-- <h2 class="text-xl font-semibold my-10">Estate Management FAQs</h2> -->
+            <div class="tab-content hidden w-full flex justify-center md:relative" id="estate">
+                <div class="space-y-4 mb-10 md:mt-40">
+                    <!-- FAQ BUTTONS -->
+                    <div class="w-full mt-10 flex-1 flex justify-center lg:justify-end">
+                        <div id="estate_enquiry_button_left"
+                            class="md:absolute md:top-10 md:left-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
 
-                <div class="space-y-4 my-10">
-                    <form action="" uname="general-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email" required>
-                            <!-- <input type="text" class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4" placeholder="Complaints" required> -->
+                        <div id="estate_enquiry_button_right"
+                            class="md:absolute md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                            What is MhomesNG +
+                        </div>
+                    </div>
 
-                            <div class="mb-5">
-                                <label for="estate_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                    <!-- Estate & Management Complaint Category -->
-                                </label>
-                                <select id="estate_complaint" name="estate_complaint"
-                                    class="block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm">
-                                    <option value="">-- Select Complaint Type --</option>
-                                    <option value="security_issue">Security or Access Issue</option>
-                                    <option value="waste_management">Poor Waste Management</option>
-                                    <option value="facility_maintenance">Facility or Common Area Neglect</option>
-                                    <option value="staff_misconduct">Estate Staff Misconduct</option>
-                                    <option value="unfair_policy">Unfair Estate Policy</option>
-                                    <option value="billing_error">Billing or Service Charge Error</option>
-                                    <option value="communication_gap">Lack of Communication or Feedback</option>
-                                    <option value="other">Other</option>
-                                </select>
+                    <div uname="estate-contact-form">
+                        
+                        <div class="my-5 w-full">
+                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                                <p class="text-center">
+                                    We'd love to hear from you. Please fill out this form.
+                                </p>
+                            </div>
+                            
+                            <form class="w-full lg:min-w-[700px]">
+                        
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Organisation" required>
+
                             </div>
 
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Mobile Number" required>
+                            </div>
 
                             <textarea
                                 class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
@@ -308,8 +516,16 @@
                             <input type="submit"
                                 class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
                                 value="Send" required>
+                        </form>
+
+                        <div class="text-center space-y-1 mt-10">
+                            <p class="text-[#292766]">Still have questions?</p>
+                            <p>
+                                Find the answers to them in our <a href="faq.html"
+                                    class="text-[#292766] font-bold">FAQ</a>
+                            </p>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
             </div>
@@ -380,7 +596,6 @@
             spans[2].classList.toggle("-translate-y-2");
         });
     </script>
-
 </body>
 
 </html>
