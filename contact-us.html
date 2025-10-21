@@ -82,13 +82,24 @@
             border-color: #4f46e5;
             box-shadow: 0 0 0 1px #4f46e5;
         }
+
+        .contact-us-form-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        @media (min-width: 576px) {
+            .contact-us-form-container {
+                width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 min-h-screen py-10">
-
-
-
     <!-- NAVBAR -->
     <nav class="bg-white border-b border-gray-200 shadow-sm fixed w-full z-20 top-0 left-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +175,7 @@
         <!-- Tab Content -->
         <div>
             <!-- General Tab (Template) -->
-            <div class="tab-content hidden w-full flex justify-center" id="general">
+            <div class="tab-content hidden flex justify-center" id="general">
                 <div class="space-y-4 my-10 w-full">
                     <form action="" uname="general-contact-form">
                         <div class="">
