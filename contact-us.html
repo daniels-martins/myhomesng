@@ -83,13 +83,13 @@
             box-shadow: 0 0 0 1px #4f46e5;
         }
 
-        .contact-us-form-container {
+        /* .contact-us-form-container {
             margin-left: auto;
             margin-right: auto;
             width: 100%;
-        }
+        } */
 
-        @media (min-width: 576px) {
+        @media (min-width: 1024px) {
             .contact-us-form-container {
                 width: 75%;
                 margin-left: auto;
@@ -173,8 +173,9 @@
         </div>
 
         <!-- Tab Content -->
-        <div>
+        <div class="contact-us-form-container">
             <!-- General Tab (Template) -->
+<!--            .contact-us-form-container-->
             <div class="tab-content hidden flex justify-center" id="general">
                 <div class="space-y-4 my-10 w-full">
                     <form action="" uname="general-contact-form">
@@ -244,7 +245,7 @@
             <div class="tab-content hidden w-full flex justify-center" id="landlord">
                 <div class="space-y-4 my-10 w-full">
                     <form action="" uname="landlord-contact-form">
-                        <div class="">
+                        <div>
                             <input type="text"
                                 class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
                                 placeholder="Full Name" required>
