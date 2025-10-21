@@ -169,7 +169,7 @@
                 data-tab="customers">Customers</button>
             <button
                 class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="estate">Estate&nbsp;&amp;&nbsp;Management</button>
+                data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
         </div>
 
         <!-- Tab Content -->
@@ -199,7 +199,7 @@
                                     class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
                                     <div class="flex-1">
                                         <label for="complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to **(Complaint)** *
+                                            I want to *
                                         </label>
                                         <select id="complaint" name="complaint"
                                             class="complaint-select is-inactive block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-base transition duration-150 ease-in-out">
@@ -265,7 +265,7 @@
                                     class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
                                     <div class="flex-1">
                                         <label for="landlord_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to **(Complaint)** *
+                                            I want to *
                                         </label>
                                         <select id="landlord_complaint" name="landlord_complaint"
                                             class="complaint-select is-inactive block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
@@ -332,7 +332,7 @@
                                     class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
                                     <div class="flex-1">
                                         <label for="agent_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to **(Complaint)** *
+                                            I want to *
                                         </label>
                                         <select id="agent_complaint" name="agent_complaint"
                                             class="complaint-select block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
@@ -399,7 +399,7 @@
                                     class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
                                     <div class="flex-1">
                                         <label for="customer_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to **(Complaint)** *
+                                            I want to *
                                         </label>
                                         <select id="customer_complaint" name="customer_complaint"
                                             class="complaint-select block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
@@ -467,7 +467,7 @@
                                     class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
                                     <div class="flex-1">
                                         <label for="estate_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to **(Complaint)** *
+                                            I want to *
                                         </label>
                                         <select id="estate_complaint" name="estate_complaint"
                                             class="complaint-select block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
@@ -579,9 +579,7 @@
         });
     </script>
 
-
-
-   <script>
+    <script>
         // Reusable function to set up the mutual exclusion logic for any form section
         function setupMutualExclusion(selectId, buttonId, messageBoxId) {
             const complaintSelect = document.getElementById(selectId);
@@ -594,7 +592,7 @@
                 return;
             }
 
-            let messageTimer = null; 
+            let messageTimer = null;
 
             // --- Helper Functions ---
 
@@ -604,7 +602,7 @@
             function showMessage(text, classes) {
                 // Remove all custom background/text classes
                 messageBox.classList.remove('bg-green-100', 'text-green-700', 'bg-blue-100', 'text-blue-900');
-                
+
                 if (text) {
                     // SHOW the box
                     messageBox.textContent = text;
@@ -616,8 +614,8 @@
                     messageBox.classList.add('opacity-0');
                     // Clear content after the transition completes
                     setTimeout(() => {
-                        messageBox.textContent = ''; 
-                    }, 300); 
+                        messageBox.textContent = '';
+                    }, 300);
                 }
             }
 
@@ -636,7 +634,7 @@
                     enquiryButton.classList.remove('is-active');
                     enquiryButton.classList.add('is-inactive', 'opacity-50'); // Dim the button
                     showMessage(`You have selected: ${complaintSelect.options[complaintSelect.selectedIndex].text}`, 'bg-green-100 text-green-700');
-                    
+
                     // Start a timer to hide the message after 3 seconds
                     messageTimer = setTimeout(() => {
                         showMessage(null);
@@ -649,7 +647,7 @@
                     enquiryButton.classList.add('is-active');
                     enquiryButton.classList.remove('is-inactive', 'opacity-50'); // Highlight the button
                     showMessage('You have chosen to Make an Enquiry.', 'bg-blue-100 text-blue-900');
-                    
+
                     // Start a timer to hide the message after 3 seconds
                     messageTimer = setTimeout(() => {
                         showMessage(null);
@@ -663,7 +661,7 @@
                     enquiryButton.classList.add('is-inactive');
                     enquiryButton.classList.remove('opacity-50');
                     // Hide the message box when neither is selected
-                    showMessage(null); 
+                    showMessage(null);
                 }
             }
 
@@ -687,7 +685,7 @@
             });
 
             // Initial Setup
-            updateState('none'); 
+            updateState('none');
         }
 
         window.onload = () => {
