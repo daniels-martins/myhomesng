@@ -153,364 +153,43 @@
 
     <!-- Tabs & Accordions -->
     <div class="max-w-5xl mx-auto mt-16 mb-40">
-        <!-- Tabs -->
-        <div class="grid grid-cols-1 lg:flex justify-between w-full gap-4">
-            <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="general">General</button>
-            <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="landlord">Landlord</button>
-            <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="agent">Agent</button>
-            <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="customers">Customers</button>
-            <button
-                class="w-full tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
+        <div class="flex-1 mb-4">
+            <label for="complaint" class="block text-sm font-medium text-gray-700 mb-2">Choose one</label>
+            <select id="complaint" name="complaint"
+                    class="complaint-select is-inactive block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-base transition duration-150 ease-in-out">
+                <option value="maintenance">General</option>
+                <option value="rent">Landlord</option>
+                <option value="utility">Agent</option>
+                <option value="security">Customers</option>
+                <option value="security">Estate & Communities</option>
+            </select>
         </div>
 
         <!-- Tab Content -->
         <div class="contact-us-form-container">
-            <!-- General Tab (Template) -->
-<!--            .contact-us-form-container-->
-            <div class="tab-content hidden flex justify-center" id="general">
-                <div class="space-y-4 my-10 w-full">
-                    <form action="" uname="general-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Organisation" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email Address" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Mobile Number" required>
+            <form action="" uname="general-contact-form">
+                <div class="">
+                    <input type="text"
+                           class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                           placeholder="Full Name" required>
+                    <input type="text"
+                           class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                           placeholder="Organisation" required>
+                    <input type="text"
+                           class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                           placeholder="Email Address" required>
+                    <input type="text"
+                           class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                           placeholder="Mobile Number" required>
 
-                            <div class="">
-                                <!-- MUTUALLY EXCLUSIVE SECTION -->
-                                <section
-                                    class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
-                                    <div class="flex-1">
-                                        <label for="complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to *
-                                        </label>
-                                        <select id="complaint" name="complaint"
-                                            class="complaint-select is-inactive block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-base transition duration-150 ease-in-out">
-                                            <option value="" selected>-- Make a Complaint about --</option>
-                                            <option value="maintenance">Maintenance Issue</option>
-                                            <option value="rent">Rent Dispute</option>
-                                            <option value="utility">Utility Problem (Water, Power, etc.)</option>
-                                            <option value="security">Security Concern</option>
-                                            <option value="noise">Noise Complaint</option>
-                                            <option value="neighbor">Neighbor Dispute</option>
-                                            <option value="fraud">Property Fraud or Misrepresentation</option>
-                                            <option value="contract">Contract Breach</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="w-full flex-1 flex md:justify-center lg:justify-end">
-                                        <div id="enquiry-button"
-                                            class="w-full enquiry-button is-inactive text-center rounded-xl px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                                            Make an Enquiry
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <!-- MESSAGE BOX -->
-                                <div id="message-box"
-                                    class="my-1 p-2 rounded-lg text-center text-xs font-medium transition-opacity duration-300 opacity-0">
-                                    <!-- Message will appear here -->
-                                </div>
-                            </div>
-                            <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Message" required></textarea>
-                            <button type="submit"
-                                class="w-fit px-10 bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Send" required> Send &nbsp; &rAarr;</button>
-                        </div>
-                    </form>
+                    <textarea
+                            class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                            placeholder="Type your message here" required></textarea>
+                    <button type="submit"
+                            class="w-fit px-10 bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
+                            value="Send" required> Send </button>
                 </div>
-            </div>
-
-            <!-- Landlord Tab (Updated) -->
-            <div class="tab-content hidden w-full flex justify-center" id="landlord">
-                <div class="space-y-4 my-10 w-full">
-                    <form action="" uname="landlord-contact-form">
-                        <div>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Organisation" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email Address" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Mobile Number" required>
-
-                            <div class="">
-                                <!-- MUTUALLY EXCLUSIVE SECTION -->
-                                <section
-                                    class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
-                                    <div class="flex-1">
-                                        <label for="landlord_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to *
-                                        </label>
-                                        <select id="landlord_complaint" name="landlord_complaint"
-                                            class="complaint-select is-inactive block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
-                                            <!-- Retain Landlord Options -->
-                                            <option value="" selected>-- Select Complaint Type --</option>
-                                            <option value="tenant_damage">Tenant Property Damage</option>
-                                            <option value="late_payment">Late Rent Payment</option>
-                                            <option value="illegal_occupancy">Illegal Occupancy</option>
-                                            <option value="maintenance_refusal">Tenant Refusing Maintenance Access</option>
-                                            <option value="eviction_issue">Eviction Process Issue</option>
-                                            <option value="utility_bills">Unpaid Utility Bills</option>
-                                            <option value="noise_disturbance">Tenant Noise or Nuisance</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="w-full flex-1 flex md:justify-center lg:justify-end">
-                                        <div id="landlord-enquiry-button"
-                                            class="w-full enquiry-button is-inactive text-center rounded-xl px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                                            Make an Enquiry
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <!-- MESSAGE BOX -->
-                                <div id="landlord_message_box"
-                                    class="my-1 p-2 rounded-lg text-center text-xs font-medium transition-opacity duration-300 opacity-0">
-                                    <!-- Message will appear here -->
-                                </div>
-                            </div>
-
-                            <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Message" required></textarea>
-                            <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Send" required>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Agent tab (Updated) -->
-            <div class="tab-content hidden w-full flex justify-center" id="agent">
-                <div class="space-y-4 my-10 w-full">
-                    <form action="" uname="agent-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Organisation" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email Address" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Mobile Number" required>
-
-                            <div class="">
-                                <!-- MUTUALLY EXCLUSIVE SECTION -->
-                                <section
-                                    class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
-                                    <div class="flex-1">
-                                        <label for="agent_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to *
-                                        </label>
-                                        <select id="agent_complaint" name="agent_complaint"
-                                            class="complaint-select block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
-                                            <!-- Retain Agent Options -->
-                                            <option value="">-- Select Complaint Type --</option>
-                                            <option value="commission_dispute">Commission Dispute</option>
-                                            <option value="fraudulent_listing">Fraudulent or Fake Listing</option>
-                                            <option value="property_misrepresentation">Property Misrepresentation</option>
-                                            <option value="client_nonpayment">Client Non-payment</option>
-                                            <option value="landlord_conflict">Conflict with Landlord</option>
-                                            <option value="unethical_practice">Unethical Practices</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="w-full flex-1 flex md:justify-center lg:justify-end">
-                                        <div id="agent-enquiry-button"
-                                            class="w-full enquiry-button is-inactive text-center rounded-xl px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                                            Make an Enquiry
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <!-- MESSAGE BOX -->
-                                <div id="agent_message_box"
-                                    class="my-1 p-2 rounded-lg text-center text-xs font-medium transition-opacity duration-300 opacity-0">
-                                    <!-- Message will appear here -->
-                                </div>
-                            </div>
-
-                            <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Message" required></textarea>
-                            <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Send" required>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-            <!-- Customers (Updated) -->
-            <div class="tab-content hidden w-full flex justify-center" id="customers">
-                <div class="space-y-4 my-10 w-full">
-                    <form action="" uname="customer-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Organisation" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email Address" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Mobile Number" required>
-
-                            <div class="">
-                                <!-- MUTUALLY EXCLUSIVE SECTION -->
-                                <section
-                                    class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
-                                    <div class="flex-1">
-                                        <label for="customer_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to *
-                                        </label>
-                                        <select id="customer_complaint" name="customer_complaint"
-                                            class="complaint-select block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
-                                            <!-- Retain Customer Options -->
-                                            <option value="">-- Select Complaint Type --</option>
-                                            <option value="high_rent">Unjustified Rent Increase</option>
-                                            <option value="maintenance_issue">Unresolved Maintenance Issue</option>
-                                            <option value="agent_fraud">Fraudulent Agent or Payment</option>
-                                            <option value="contract_violation">Landlord Contract Violation</option>
-                                            <option value="deposit_refund">Unreturned Security Deposit</option>
-                                            <option value="harassment">Landlord or Neighbor Harassment</option>
-                                            <option value="poor_facility">Poor Facility Condition</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-
-                                   <div class="w-full flex-1 flex md:justify-center lg:justify-end">
-                                        <div id="customer-enquiry-button"
-                                            class="w-full enquiry-button is-inactive text-center rounded-xl px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                                            Make an Enquiry
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <!-- MESSAGE BOX -->
-                                <div id="customer_message_box"
-                                    class="my-1 p-2 rounded-lg text-center text-xs font-medium transition-opacity duration-300 opacity-0">
-                                    <!-- Message will appear here -->
-                                </div>
-                            </div>
-
-                            <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Message" required></textarea>
-                            <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Send" required>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
-            <!-- Estate & Management (Updated) -->
-            <div class="tab-content hidden w-full flex justify-center" id="estate">
-                <div class="space-y-4 my-10 w-full">
-                    <form action="" uname="estate-contact-form">
-                        <div class="">
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Full Name" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Organisation" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Email Address" required>
-                            <input type="text"
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Mobile Number" required>
-
-                            <div class="">
-                                <!-- MUTUALLY EXCLUSIVE SECTION -->
-                                <section
-                                    class="complaint-and-enquiry-section md:flex md:justify-between gap-6 mb-5 items-center">
-                                    <div class="flex-1">
-                                        <label for="estate_complaint" class="block text-sm font-medium text-gray-700 mb-2">
-                                            I want to *
-                                        </label>
-                                        <select id="estate_complaint" name="estate_complaint"
-                                            class="complaint-select block w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none focus:ring-1 sm:text-sm transition duration-150 ease-in-out">
-                                            <!-- Retain Estate & Management Options -->
-                                            <option value="">-- Select Complaint Type --</option>
-                                            <option value="security_issue">Security or Access Issue</option>
-                                            <option value="waste_management">Poor Waste Management</option>
-                                            <option value="facility_maintenance">Facility or Common Area Neglect</option>
-                                            <option value="staff_misconduct">Estate Staff Misconduct</option>
-                                            <option value="unfair_policy">Unfair Estate Policy</option>
-                                            <option value="billing_error">Billing or Service Charge Error</option>
-                                            <option value="communication_gap">Lack of Communication or Feedback</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-
-                                 <div class="w-full flex-1 flex md:justify-center lg:justify-end">
-                                        <div id="estate-enquiry-button"
-                                            class="w-full enquiry-button is-inactive text-center rounded-xl px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                                            Make an Enquiry
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <!-- MESSAGE BOX -->
-                                <div id="estate_message_box"
-                                    class="my-1 p-2 rounded-lg text-center text-xs font-medium transition-opacity duration-300 opacity-0">
-                                    <!-- Message will appear here -->
-                                </div>
-                            </div>
-
-
-                            <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Message" required></textarea>
-                            <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Send" required>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
+            </form>
         </div>
     </div>
 
