@@ -643,13 +643,12 @@
         classListOfAccordions.forEach(classListOfAccordion => {
            const accordionWrapper = document.querySelector(classListOfAccordion);
 
-           console.log(accordionWrapper);
-
            accordionWrapper.addEventListener('click', () => {
                const body = accordionWrapper.querySelector('.accordion-body');
 
                body.classList.toggle('hidden');
                body.classList.toggle('max-h-0');
+               accordionWrapper.classList.toggle('bg-[#F3F3FF]');
            });
         });
 
