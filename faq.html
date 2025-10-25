@@ -54,6 +54,18 @@
       /* Will use the corresponding italic weight you imported */
       font-weight: 400;
     }
+
+    .w-60p {
+      width: 60%;
+    }
+
+    .w-75p {
+      width: 75%;
+    }
+
+    .w-80p {
+      width: 80%;
+    }
   </style>
 </head>
 
@@ -105,13 +117,13 @@
     </div>
   </nav>
 
-  <header class="my-20 text-3xl font-extrabold leading-none tracking-tight text-[#292766] text-center text-5xl">
+  <header class="w-75p my-20 mx-auto text-3xl font-extrabold leading-none tracking-tight text-[#292766] text-center text-5xl">
     Frequently Asked Questions
   </header>
 
   <!-- Search -->
-  <div class="search-container w-full flex justify-center">
-    <div class="w-fit  flex justify-center mb-20 relative">
+  <div class="search-container w-60p mx-auto flex justify-center">
+    <div class="w-full mx-auto flex justify-center mb-20 relative">
       <div class="search-icon-container absolute left-3 top-4">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -119,7 +131,7 @@
             fill="#6A6A6A" />
         </svg>
       </div>
-      <input class="block transition  placeholder:text-sm rounded-xl px-10 focus:outline-none focus:border-gray-500 py-3 bg-gray-50 border border-gray-300" type="search"
+      <input class="w-full block transition  placeholder:text-sm rounded-xl px-10 focus:outline-none focus:border-gray-500 py-3 bg-gray-50 border border-gray-300" type="search"
         placeholder="Search For Keyword">
     </div>
   </div>
