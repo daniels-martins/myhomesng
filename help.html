@@ -664,19 +664,40 @@
         });
         tabButtons[0].click();
 
-        const classListOfAccordions = ['#general_enquiry_button_left', '#general_enquiry_button_right', '#landlord_enquiry_button_left', '#landlord_enquiry_button_right', '#agent_enquiry_button_left', '#agent_enquiry_button_right', '#customer_enquiry_button_left', '#customer_enquiry_button_right', '#estate_enquiry_button_left', '#estate_enquiry_button_right'];
+        const accordionWrappers = ['#general_enquiry_button_left', '#general_enquiry_button_right', '#landlord_enquiry_button_left', '#landlord_enquiry_button_right', '#agent_enquiry_button_left', '#agent_enquiry_button_right', '#customer_enquiry_button_left', '#customer_enquiry_button_right', '#estate_enquiry_button_left', '#estate_enquiry_button_right']
+            .map(classListOfAccordion => document.querySelector(classListOfAccordion));
 
-        classListOfAccordions.forEach(classListOfAccordion => {
-           const accordionWrapper = document.querySelector(classListOfAccordion);
-
+        accordionWrappers.forEach(accordionWrapper => {
            accordionWrapper.addEventListener('click', () => {
+               if (!accordionWrapper.classList.contains('active')) {
+                   toggleOtherHeights(accordionWrappers);
+               }
+
+               accordionWrapper.classList.toggle('active');
+               accordionWrapper.classList.toggle('bg-[#F3F3FF]');
+
                const body = accordionWrapper.querySelector('.accordion-body');
 
                body.classList.toggle('hidden');
                body.classList.toggle('max-h-0');
-               accordionWrapper.classList.toggle('bg-[#F3F3FF]');
            });
         });
+
+        function toggleOtherHeights(accordionWrappers) {
+            for (let i = 0; i < accordionWrappers.length; i++) {
+                const current = accordionWrappers[i];
+
+                if (current.classList.contains('active')) {
+                    current.classList.toggle('bg-[#F3F3FF]');
+                    current.classList.remove('active');
+
+                    const body = current.querySelector('.accordion-body');
+
+                    body.classList.toggle('hidden');
+                    body.classList.toggle('max-h-0');
+                }
+            }
+        }
     </script>
 
     <!-- mobile menu -->
