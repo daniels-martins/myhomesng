@@ -55,12 +55,55 @@
             font-weight: 400;
         }
 
+        .w-100 {
+            width: 100%;
+        }
+
         .w-210px {
             width: 210px;
         }
 
-        .w-420px {
+        .{
             width: 420px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 576px) {
+            .flex-md-row {
+                flex-direction: row;
+            }
+
+            .w-sm-210px {
+                width: 210px;
+            }
+        }
+
+        #general_enquiry_button_left,
+        #general_enquiry_button_right,
+        #landlord_enquiry_button_left,
+        #landlord_enquiry_button_right,
+        #agent_enquiry_button_left,
+        #agent_enquiry_button_right,
+        #customer_enquiry_button_left,
+        #customer_enquiry_button_right,
+        #estate_enquiry_button_left,
+        #estate_enquiry_button_right {
+            width: 100%;
+
+            @media (min-width: 576px) {
+                width: 360px;
+            }
         }
     </style>
 </head>
@@ -136,62 +179,64 @@
     </header>
 
     <!-- Tabs & Accordions -->
-    <div class="max-w-5xl mx-auto mt-16 mb-40">
-        <!-- Tabs -->
-        <div class="grid grid-cols-1 lg:flex justify-between w-full gap-4">
-            <button
-                class="w-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+    <!-- Tabs -->
+    <div class="d-flex flex-column flex-md-row w-100 mt-16 gap-4" style="overflow-x: auto">
+        <button
+                class="w-100 w-sm-210px ms-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="general">General</button>
-            <button
-                class="w-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        <button
+                class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="landlord">Landlord</button>
-            <button
-                class="w-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        <button
+                class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="agent">Agent</button>
-            <button
-                class="w-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        <button
+                class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="customers">Customers</button>
-            <button
-                class="w-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        <button
+                class="w-100 w-sm-210px me-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                 data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
-        </div>
+    </div>
 
+    <div class="max-w-5xl mx-auto mb-40">
         <!-- Tab Content -->
         <div>
             <!-- Content Template -->
-            <div class="tab-content hidden w-full flex justify-center md:relative" id="general">
-                <div class="space-y-4 mb-10">
-                    <!-- FAQ BUTTONS -->
-                    <div class="w-full mt-10 flex-1 flex gap-2">
-                        <div id="general_enquiry_button_left"
-                            class="w-420px h-fit faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">Is there a free trial available?</span>
+            <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="general">
+                <!-- FAQ BUTTONS -->
+                <div class="w-full mt-10 flex-1 flex flex-column flex-md-row flex-wrap gap-2">
+                    <div id="general_enquiry_button_left"
+                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">Is there a free trial available?</span>
 
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">Yes! We offer a 14 days free trial on all plans to enable exploration of all myhomes
-                                    features.</p>
-                            </div>
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
                         </div>
 
-                        <div id="general_enquiry_button_right"
-                            class="w-420px h-fit faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">Can I have multiple profiles/accounts?</span>
-
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">
-                                    Yes, you can have multiple profiles or accounts using the same email on myhomesng.</p>
-                            </div>
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Yes! We offer a 14 days free trial on all plans to enable exploration of all myhomes
+                                features.</p>
+                            <a href="#" class="text-gray-600">learn more</a>
                         </div>
                     </div>
 
+                    <div id="general_enquiry_button_right"
+                         class="h-fit ms-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">Can I have multiple profiles/accounts?</span>
+
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
+                        </div>
+
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">
+                                Yes, you can have multiple profiles or accounts using the same email on myhomesng.</p>
+                            <a href="#" class="text-gray-600">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-10">
                     <div uname="general-contact-form">
                         <div class="my-5 w-full">
                                 <h2 class="text-4xl text-center my-5">Let's Talk</h2>
@@ -251,48 +296,50 @@
             </div>
 
             <!-- landlord Tabs -->
-            <div class="tab-content hidden w-full flex justify-center md:relative" id="landlord">
-                <div class="space-y-4 mb-10">
-                    <!-- FAQ BUTTONS -->
-                    <div class="w-full mt-10 flex-1 flex gap-2">
-                        <div id="landlord_enquiry_button_left"
-                            class="w-420px h-fit faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">How can I register as a Landlord?</span>
+            <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="landlord">
+                <!-- FAQ BUTTONS -->
+                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
+                    <div id="landlord_enquiry_button_left"
+                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">How can I register as a Landlord?</span>
 
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
-                                    Store.</p>
-                                <ul>
-                                    <li style="text-wrap: auto">Click "Log in" on myhomes homepage</li>
-                                    <li style="text-wrap: auto">Click "Sign up" on the Log in Page</li>
-                                    <li style="text-wrap: auto">Click "Continue"</li>
-                                    <li style="text-wrap: auto">Fill in your details and Click "Sign up" to complete your registration.</li>
-                                </ul>
-                            </div>
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
                         </div>
 
-                        <div id="landlord_enquiry_button_right"
-                            class="w-420px h-fit md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">What are the KYC requirements?</span>
-
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p>
-                                <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
-                                <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
-                                <p style="text-wrap: auto"><b>Tier 2:</b> National Identification Number and Next of Kin</p>
-                                <p style="text-wrap: auto"><b>Tier 2:</b> Indemnity and Proof of Address</p>
-                            </div>
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
+                                Store.</p>
+                            <ul>
+                                <li style="text-wrap: auto">Click "Log in" on myhomes homepage</li>
+                                <li style="text-wrap: auto">Click "Sign up" on the Log in Page</li>
+                                <li style="text-wrap: auto">Click "Continue"</li>
+                                <li style="text-wrap: auto">Fill in your details and Click "Sign up" to complete your registration.</li>
+                            </ul>
+                            <a href="#" class="text-gray-600">learn more</a>
                         </div>
                     </div>
 
+                    <div id="landlord_enquiry_button_right"
+                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">What are the KYC requirements?</span>
+
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
+                        </div>
+
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p>
+                            <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
+                            <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
+                            <p style="text-wrap: auto"><b>Tier 2:</b> National Identification Number and Next of Kin</p>
+                            <p style="text-wrap: auto"><b>Tier 2:</b> Indemnity and Proof of Address</p>
+                            <a href="#" class="text-gray-600">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-10">
                     <div uname="landlord-contact-form">
                         <div class="my-5 w-full">
                                 <h2 class="text-4xl text-center my-5">Let's Talk</h2>
@@ -351,45 +398,47 @@
             </div>
 
             <!-- agent tab -->
-            <div class="tab-content hidden w-full flex justify-center md:relative" id="agent">
-                <div class="space-y-4 mb-10">
-                    <!-- FAQ BUTTONS -->
-                    <div class="w-full mt-10 flex-1 flex gap-2">
-                        <div id="agent_enquiry_button_left"
-                            class="w-420px h-fit faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">How do I register as an Agent?</span>
+            <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="agent">
+                <!-- FAQ BUTTONS -->
+                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
+                    <div id="agent_enquiry_button_left"
+                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">How do I register as an Agent?</span>
 
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
-                                    Store.</p>
-                                <ul>
-                                    <li style="text-wrap: auto">Click "Sign Up"</li>
-                                    <li style="text-wrap: auto">Select "Agent"</li>
-                                    <li style="text-wrap: auto">Click "Continue," fill in your details, and complete registration.</li>
-                                </ul>
-                            </div>
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
                         </div>
 
-                        <div id="agent_enquiry_button_right"
-                            class="w-420px h-fit md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">What are the KYC requirements?</span>
-
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p>
-                                <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
-                                <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
-                            </div>
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
+                                Store.</p>
+                            <ul>
+                                <li style="text-wrap: auto">Click "Sign Up"</li>
+                                <li style="text-wrap: auto">Select "Agent"</li>
+                                <li style="text-wrap: auto">Click "Continue," fill in your details, and complete registration.</li>
+                            </ul>
+                            <a href="#" class="text-gray-600">learn more</a>
                         </div>
                     </div>
 
+                    <div id="agent_enquiry_button_right"
+                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">What are the KYC requirements?</span>
+
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
+                        </div>
+
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p>
+                            <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
+                            <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
+                            <a href="#" class="text-gray-600">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-10">
                     <div uname="agent-contact-form">
                         <div class="my-5 w-full">
                                 <h2 class="text-4xl text-center my-5">Let's Talk</h2>
@@ -449,47 +498,49 @@
             </div>
 
             <!-- customers -->
-            <div class="tab-content hidden w-full flex justify-center md:relative" id="customers">
-                <div class="space-y-4 mb-10">
-                    <!-- FAQ BUTTONS -->
-                    <div class="w-full mt-10 flex-1 flex gap-2">
-                        <div id="customer_enquiry_button_left"
-                            class="w-420px h-fit faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">Steps to register as a Customer</span>
+            <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="customers">
+                <!-- FAQ BUTTONS -->
+                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
+                    <div id="customer_enquiry_button_left"
+                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">Steps to register as a Customer</span>
 
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
-                                    Store.</p>
-                                <ul>
-                                    <li style="text-wrap: auto">Click "Sign Up"</li>
-                                    <li style="text-wrap: auto">Select "Customer"</li>
-                                    <li style="text-wrap: auto">Click "Continue," fill in your details, and sign up.</li>
-                                </ul>
-                            </div>
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
                         </div>
 
-                        <div id="customer_enquiry_button_right"
-                            class="w-420px h-fit md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">What are the KYC requirements?</span>
-
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                                <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are four levels of KYC for customers:</p>
-                                <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
-                                <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
-                                <p style="text-wrap: auto"><b>Tier 3:</b> National Identification Number Verification and Next of Kin</p>
-                                <p style="text-wrap: auto"><b>Tier 4:</b> Indemnity and Proof of Address</p>
-                            </div>
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
+                                Store.</p>
+                            <ul>
+                                <li style="text-wrap: auto">Click "Sign Up"</li>
+                                <li style="text-wrap: auto">Select "Customer"</li>
+                                <li style="text-wrap: auto">Click "Continue," fill in your details, and sign up.</li>
+                            </ul>
+                            <a href="#" class="text-gray-600">learn more</a>
                         </div>
                     </div>
 
+                    <div id="customer_enquiry_button_right"
+                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">What are the KYC requirements?</span>
+
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
+                        </div>
+
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are four levels of KYC for customers:</p>
+                            <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
+                            <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
+                            <p style="text-wrap: auto"><b>Tier 3:</b> National Identification Number Verification and Next of Kin</p>
+                            <p style="text-wrap: auto"><b>Tier 4:</b> Indemnity and Proof of Address</p>
+                            <a href="#" class="text-gray-600">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-10">
                     <div uname="customer-contact-form">
                         <div class="my-5 w-full">
                                 <h2 class="text-4xl text-center my-5">Let's Talk</h2>
@@ -549,42 +600,44 @@
             </div>
 
             <!-- estate mgt -->
-            <div class="tab-content hidden w-full flex justify-center md:relative" id="estate">
-                <div class="space-y-4 mb-10">
-                    <!-- FAQ BUTTONS -->
-                    <div class="w-full mt-10 flex-1 flex gap-2">
-                        <div id="estate_enquiry_button_left"
-                            class="w-420px h-fit faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">What are Estates and Communities?</span>
+            <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="estate">
+                <!-- FAQ BUTTONS -->
+                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
+                    <div id="estate_enquiry_button_left"
+                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">What are Estates and Communities?</span>
 
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all">
-                                <p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">
-                                    Estates and Communities is a managed residential or commercial
-                                    environment/community consisting of Facility Managers and Residents under shared
-                                    infrastructures.</p>
-                            </div>
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
                         </div>
 
-                        <div id="estate_enquiry_button_right"
-                            class="w-420px h-fit md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-10 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                            <div style="display: flex;">
-                                <span class="ms-auto">What is an Estate ID?</span>
-
-                                <span class="ms-2 me-auto" style="display: flex;">+</span>
-                            </div>
-
-                            <div class="hidden mt-2 max-h-0 accordion-body transition-all">
-                                <p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">
-                                    A unique code which identifies specific estates and communities. This is required for
-                                    Resident sign-up.</p>
-                            </div>
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">
+                                Estates and Communities is a managed residential or commercial
+                                environment/community consisting of Facility Managers and Residents under shared
+                                infrastructures.</p>
+                            <a href="#" class="text-gray-600">learn more</a>
                         </div>
                     </div>
 
+                    <div id="estate_enquiry_button_right"
+                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
+                        <div style="display: flex;">
+                            <span class="ms-auto">What is an Estate ID?</span>
+
+                            <span class="ms-2 me-auto" style="display: flex;">+</span>
+                        </div>
+
+                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                            <p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">
+                                A unique code which identifies specific estates and communities. This is required for
+                                Resident sign-up.</p>
+                            <a href="#" class="text-gray-600">learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-10">
                     <div uname="estate-contact-form">
                         <div class="my-5 w-full">
                                 <h2 class="text-4xl text-center my-5">Let's Talk</h2>
