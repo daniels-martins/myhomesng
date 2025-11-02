@@ -59,6 +59,14 @@
       width: 60%;
     }
 
+    .w-65p {
+      width: 65%;
+    }
+
+    .w-55p {
+      width: 55%;
+    }
+
     @media (max-width: 576px) {
       .w-100p {
         width: 100%;
@@ -144,16 +152,16 @@
   </header>
 
   <!-- Search -->
-  <div class="search-container w-100p w-30p w-40p w-60p mx-auto flex justify-center">
+  <div class="search-container w-55p mx-auto flex justify-center">
     <div class="w-full mx-auto flex justify-center mb-20 relative">
-      <div class="search-icon-container absolute left-3 top-4">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="search-icon-container absolute left-4 top-5">
+        <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.3707 1.888 11.112C0.63 9.85333 0.000667196 8.316 5.29101e-07 6.5C-0.000666138 4.684 0.628667 3.14667 1.888 1.888C3.14733 0.629333 4.68467 0 6.5 0C8.31533 0 9.853 0.629333 11.113 1.888C12.373 3.14667 13.002 4.684 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5633 8.81333 11.0007 7.75067 11 6.5C10.9993 5.24933 10.562 4.187 9.688 3.313C8.814 2.439 7.75133 2.00133 6.5 2C5.24867 1.99867 4.18633 2.43633 3.313 3.313C2.43967 4.18967 2.002 5.252 2 6.5C1.998 7.748 2.43567 8.81067 3.313 9.688C4.19033 10.5653 5.25267 11.0027 6.5 11Z"
             fill="#6A6A6A" />
         </svg>
       </div>
-      <input class="w-full block transition  placeholder:text-sm rounded-xl px-10 focus:outline-none focus:border-gray-500 py-3 bg-gray-50 border border-gray-300" type="search"
+      <input class="w-full block transition text-base placeholder:text-base rounded-xl px-12 focus:outline-none focus:border-gray-500 py-5 bg-gray-50 border border-gray-300" type="search"
         placeholder="Search For Keyword">
     </div>
   </div>
@@ -183,11 +191,11 @@
     <div>
       <!-- General -->
       <div class="tab-content hidden" id="general">
-        <div class="space-y-2 mt-5 my-0 mb-2 general single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 mt-5 my-0 mb-2 general single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             <span class="my-auto">What does Myhomes do?</span>
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -198,11 +206,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 general single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 general single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             Can I have multiple profiles/ accounts?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -213,11 +221,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 general single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 general single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What is a Property ID?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -227,11 +235,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 general single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 general single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What is the difference between Estate ID and Property ID?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -245,11 +253,11 @@
       <!-- Other Tabs -->
       <div class="tab-content hidden" id="landlord">
         <!-- <h2 class="text-xl font-semibold my-0">Landlord FAQs</h2> -->
-        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How can I register as a Landlord?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -259,11 +267,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What are the KYC requirements?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -277,11 +285,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How can I find the best tenant on this app?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -292,11 +300,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How do I list my property as a landlord on this app
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -310,11 +318,11 @@
 
       <div class="tab-content hidden" id="agent">
         <!-- <h2 class="text-xl font-semibold my-0">Agent FAQs</h2> -->
-        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How do I register as an Agent?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -327,11 +335,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What are the KYC requirements?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -343,11 +351,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How do I get direct contact with landlord here
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -358,11 +366,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How do I get my client preference
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -375,11 +383,11 @@
       </div>
 
       <div class="tab-content hidden" id="customers">
-        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             Is there a cost to use the platform?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -389,11 +397,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             Is there a free trial available?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -403,11 +411,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How can I reach an agent
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -418,11 +426,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How good are the houses
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -435,11 +443,11 @@
       </div>
 
       <div class="tab-content hidden" id="estate">
-        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 mt-5 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What is a Property ID?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -449,11 +457,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What is the difference between Estate ID and Property ID?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -463,11 +471,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What are Estates and Communities?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -478,11 +486,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+                  class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             What is an Estate ID?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -492,11 +500,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How do I manage people and properties here
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -507,11 +515,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             Do I have control over the people that comes?
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -522,11 +530,11 @@
           </div>
         </div>
 
-        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper bg-[#D4cece] rounded-lg">
+        <div class="space-y-2 my-0 mb-2 single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
           <button
-            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-4 pb-2 font-bold text-gray-700 transition-colors rounded-lg">
+            class="accordion-header w-full flex justify-between items-center px-8 px-8 pt-8 pb-5 font-bold text-gray-700 transition-colors rounded-lg">
             How does this application benefit my estate
-            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-9 h-9"
+            <svg class="accordion-icon transition-transform text-white bg-[#292766] p-1 rounded-full w-12 h-12"
               fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
