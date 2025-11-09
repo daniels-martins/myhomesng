@@ -89,20 +89,11 @@
             }
         }
 
-        #general_enquiry_button_left,
-        #general_enquiry_button_right,
-        #landlord_enquiry_button_left,
-        #landlord_enquiry_button_right,
-        #agent_enquiry_button_left,
-        #agent_enquiry_button_right,
-        #customer_enquiry_button_left,
-        #customer_enquiry_button_right,
-        #estate_enquiry_button_left,
-        #estate_enquiry_button_right {
+        .faq-button {
             width: 100%;
 
             @media (min-width: 576px) {
-                width: 360px;
+                width: calc(210px * 2 + 1rem);
             }
         }
     </style>
@@ -180,118 +171,116 @@
 
     <!-- Tabs & Accordions -->
     <!-- Tabs -->
-    <div class="d-flex flex-column flex-md-row w-100 mt-16 gap-4" style="overflow-x: auto">
-        <button
-                class="w-100 w-sm-210px ms-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="general">General</button>
-        <button
-                class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="landlord">Landlord</button>
-        <button
-                class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="agent">Agent</button>
-        <button
-                class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="customers">Customers</button>
-        <button
-                class="w-100 w-sm-210px me-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
-                data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
-    </div>
+    <div class="d-flex flex-column mt-16 mx-auto" style="justify-self: center;">
+        <div class="d-flex flex-column flex-md-row w-100 gap-4" style="overflow-x: auto">
+            <button
+                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    data-tab="general">General</button>
+            <button
+                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    data-tab="landlord">Landlord</button>
+            <button
+                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    data-tab="agent">Agent</button>
+            <button
+                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    data-tab="customers">Customers</button>
+            <button
+                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
+        </div>
 
-    <div class="max-w-5xl mx-auto mb-40">
+        <!-- FAQ BUTTONS -->
+        <div class="mt-10 flex justify-between gap-6">
+            <div id="faq_left"
+                 class="h-fit me-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out mt-5">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="faq-left-header-text"></span>
+
+                    <span class="ms-2" style="display: flex;">+</span>
+                </div>
+
+                <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                    <div class="pb-1 faq-left-body-text" style="text-wrap: auto;"></div>
+                    <a href="#" class="text-gray-600">learn more</a>
+                </div>
+            </div>
+
+            <div id="faq_right"
+                 class="h-fit ms-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out mt-5">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="faq-right-header-text"></span>
+
+                    <span class="ms-2" style="display: flex;">+</span>
+                </div>
+
+                <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                    <div class="pb-1 faq-right-body-text" style="text-wrap: auto;"></div>
+                    <a href="#" class="text-gray-600">learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full mt-4 flex justify-start">
+            <div class="w-full md:w-420px text-left">
+                <p class="text-[#292766]">Still have questions?</p>
+                <p>
+                    Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
+                    <span class="my-auto">or</span>
+                    <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
+                </p>
+            </div>
+        </div>
+
         <!-- Tab Content -->
-        <div>
+        <div class="d-flex flex-column mt-8">
             <!-- Content Template -->
             <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="general">
-                <!-- FAQ BUTTONS -->
-                <div class="w-full mt-10 flex justify-between gap-6">
-                    <div id="general_enquiry_button_left"
-                         class="w-full md:w-[48%] h-fit faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out mt-5">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span>Is there a free trial available?</span>
-
-                            <span class="ms-2" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Yes! We offer a 14 days free trial on all plans to enable exploration of all myhomes
-                                features.</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-
-                    <div id="general_enquiry_button_right"
-                         class="w-full md:w-[48%] h-fit faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out mt-5">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span>Can I have multiple profiles/accounts?</span>
-
-                            <span class="ms-2" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">
-                                Yes, you can have multiple profiles or accounts using the same email on myhomesng.</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-full mt-4 flex justify-start">
-                    <div class="w-full md:w-420px text-left">
-                        <p class="text-[#292766]">Still have questions?</p>
-                        <p>
-                            Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
-                            <span class="my-auto">or</span>
-                            <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
-                        </p>
-                    </div>
-                </div>
-
                 <div class="space-y-4 mb-10">
                     <div uname="general-contact-form">
                         <div class="my-5 w-full">
-                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
-                                <p class="text-center">
-                                    We'd love to hear from you. Please fill out this form.
-                                </p>
-                            </div>
+                            <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                            <p class="text-center">
+                                We'd love to hear from you. Please fill out this form.
+                            </p>
+                        </div>
 
-                            <form class="w-full lg:min-w-[700px]">
-
-                            <div class="">
-
-                                <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Full Name" required>
-                            </div>
-                            <div class="">
-
-                                <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Organisation" required>
-
-                            </div>
+                        <form class="w-full lg:min-w-[700px]">
 
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Email" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Full Name" required>
+                            </div>
+                            <div class="">
+
+                                <input type="text"
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Organisation" required>
+
                             </div>
 
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Mobile Number" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Mobile Number" required>
                             </div>
 
                             <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Type your message here" required></textarea>
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Type your message here" required></textarea>
                             <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Submit" required>
+                                   class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
+                                   value="Submit" required>
                         </form>
 
                     </div>
@@ -300,401 +289,191 @@
 
             <!-- landlord Tabs -->
             <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="landlord">
-                <!-- FAQ BUTTONS -->
-                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
-                    <div id="landlord_enquiry_button_left"
-                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">How can I register as a Landlord?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
-                                Store.</p>
-                            <ul>
-                                <li style="text-wrap: auto">Click "Log in" on myhomes homepage</li>
-                                <li style="text-wrap: auto">Click "Sign up" on the Log in Page</li>
-                                <li style="text-wrap: auto">Click "Continue"</li>
-                                <li style="text-wrap: auto">Fill in your details and Click "Sign up" to complete your registration.</li>
-                            </ul>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-
-                    <div id="landlord_enquiry_button_right"
-                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">What are the KYC requirements?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p>
-                            <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
-                            <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
-                            <p style="text-wrap: auto"><b>Tier 2:</b> National Identification Number and Next of Kin</p>
-                            <p style="text-wrap: auto"><b>Tier 2:</b> Indemnity and Proof of Address</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="space-y-4 mb-10">
                     <div uname="landlord-contact-form">
                         <div class="my-5 w-full">
-                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
-                                <p class="text-center">
-                                    We'd love to hear from you. Please fill out this form.
-                                </p>
-                            </div>
-                            <form class="w-full lg:min-w-[700px]">
-
+                            <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                            <p class="text-center">
+                                We'd love to hear from you. Please fill out this form.
+                            </p>
+                        </div>
+                        <form class="w-full lg:min-w-[700px]">
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Full Name" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Full Name" required>
                             </div>
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Organisation" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Organisation" required>
 
                             </div>
 
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Email" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Email" required>
                             </div>
 
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Mobile Number" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Mobile Number" required>
                             </div>
 
                             <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Type your message here" required></textarea>
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Type your message here" required></textarea>
                             <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Submit" required>
+                                   class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
+                                   value="Submit" required>
                         </form>
-
-                        <div class="text-center space-y-1 mt-10">
-                            <p class="text-[#292766]">Still have questions?</p>
-                            <p>
-                                Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
-                                <span class="my-auto">or</span>
-                                <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- agent tab -->
             <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="agent">
-                <!-- FAQ BUTTONS -->
-                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
-                    <div id="agent_enquiry_button_left"
-                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">How do I register as an Agent?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
-                                Store.</p>
-                            <ul>
-                                <li style="text-wrap: auto">Click "Sign Up"</li>
-                                <li style="text-wrap: auto">Select "Agent"</li>
-                                <li style="text-wrap: auto">Click "Continue," fill in your details, and complete registration.</li>
-                            </ul>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-
-                    <div id="agent_enquiry_button_right"
-                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">What are the KYC requirements?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p>
-                            <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
-                            <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="space-y-4 mb-10">
                     <div uname="agent-contact-form">
                         <div class="my-5 w-full">
-                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
-                                <p class="text-center">
-                                    We'd love to hear from you. Please fill out this form.
-                                </p>
-                            </div>
+                            <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                            <p class="text-center">
+                                We'd love to hear from you. Please fill out this form.
+                            </p>
+                        </div>
 
-                            <form class="w-full lg:min-w-[700px]">
-
+                        <form class="w-full lg:min-w-[700px]">
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Full Name" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Full Name" required>
                             </div>
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Organisation" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Organisation" required>
 
-                            </div>
-
-                            <div class="">
-
-                                <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Email" required>
                             </div>
 
                             <div class="">
 
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Mobile Number" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Email" required>
+                            </div>
+
+                            <div class="">
+
+                                <input type="text"
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Mobile Number" required>
                             </div>
 
                             <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Type your message here" required></textarea>
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Type your message here" required></textarea>
                             <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Submit" required>
+                                   class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
+                                   value="Submit" required>
                         </form>
-
-                        <div class="text-center space-y-1 mt-10">
-                            <p class="text-[#292766]">Still have questions?</p>
-                            <p>
-                                Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
-                                <span class="my-auto">or</span>
-                                <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- customers -->
             <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="customers">
-                <!-- FAQ BUTTONS -->
-                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
-                    <div id="customer_enquiry_button_left"
-                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">Steps to register as a Customer</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play
-                                Store.</p>
-                            <ul>
-                                <li style="text-wrap: auto">Click "Sign Up"</li>
-                                <li style="text-wrap: auto">Select "Customer"</li>
-                                <li style="text-wrap: auto">Click "Continue," fill in your details, and sign up.</li>
-                            </ul>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-
-                    <div id="customer_enquiry_button_right"
-                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">What are the KYC requirements?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600" style="text-wrap: auto;">There are four levels of KYC for customers:</p>
-                            <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p>
-                            <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>
-                            <p style="text-wrap: auto"><b>Tier 3:</b> National Identification Number Verification and Next of Kin</p>
-                            <p style="text-wrap: auto"><b>Tier 4:</b> Indemnity and Proof of Address</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="space-y-4 mb-10">
                     <div uname="customer-contact-form">
                         <div class="my-5 w-full">
-                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
-                                <p class="text-center">
-                                    We'd love to hear from you. Please fill out this form.
-                                </p>
-                            </div>
+                            <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                            <p class="text-center">
+                                We'd love to hear from you. Please fill out this form.
+                            </p>
+                        </div>
 
-                            <form class="w-full lg:min-w-[700px]">
-
+                        <form class="w-full lg:min-w-[700px]">
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Full Name" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Full Name" required>
                             </div>
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Organisation" required>
-
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Organisation" required>
                             </div>
 
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Email" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Email" required>
                             </div>
 
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Mobile Number" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Mobile Number" required>
                             </div>
 
                             <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Type your message here" required></textarea>
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Type your message here" required></textarea>
                             <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Submit" required>
+                                   class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
+                                   value="Submit" required>
                         </form>
-
-                        <div class="text-center space-y-1 mt-10">
-                            <p class="text-[#292766]">Still have questions?</p>
-                            <p>
-                                Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
-                                <span class="my-auto">or</span>
-                                <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- estate mgt -->
             <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="estate">
-                <!-- FAQ BUTTONS -->
-                <div class="w-full mt-10 flex-1 flex gap-2 flex-column flex-md-row">
-                    <div id="estate_enquiry_button_left"
-                         class="h-fit me-auto faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">What are Estates and Communities?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">
-                                Estates and Communities is a managed residential or commercial
-                                environment/community consisting of Facility Managers and Residents under shared
-                                infrastructures.</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-
-                    <div id="estate_enquiry_button_right"
-                         class="h-fit ms-auto md:top-10 md:right-0 faq-button is-inactive text-center rounded-lg px-2 py-1 sm:py-1.5 font-medium whitespace-nowrap cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out my-auto h-fit mt-5">
-                        <div style="display: flex;">
-                            <span class="ms-auto">What is an Estate ID?</span>
-
-                            <span class="ms-2 me-auto" style="display: flex;">+</span>
-                        </div>
-
-                        <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                            <p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">
-                                A unique code which identifies specific estates and communities. This is required for
-                                Resident sign-up.</p>
-                            <a href="#" class="text-gray-600">learn more</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="space-y-4 mb-10">
                     <div uname="estate-contact-form">
                         <div class="my-5 w-full">
-                                <h2 class="text-4xl text-center my-5">Let's Talk</h2>
-                                <p class="text-center">
-                                    We'd love to hear from you. Please fill out this form.
-                                </p>
-                            </div>
-                            
-                            <form class="w-full lg:min-w-[700px]">
-                        
-                            <div class="">
+                            <h2 class="text-4xl text-center my-5">Let's Talk</h2>
+                            <p class="text-center">
+                                We'd love to hear from you. Please fill out this form.
+                            </p>
+                        </div>
 
+                        <form class="w-full lg:min-w-[700px]">
+                            <div class="">
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Full Name" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Full Name" required>
                             </div>
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Organisation" required>
-
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Organisation" required>
                             </div>
 
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Email" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Email" required>
                             </div>
 
                             <div class="">
-
                                 <input type="text"
-                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                    placeholder="Mobile Number" required>
+                                       class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                       placeholder="Mobile Number" required>
                             </div>
 
                             <textarea
-                                class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
-                                placeholder="Type your message here" required></textarea>
+                                    class="w-full placeholder:text-[#292766]  border border-gray-300 rounded-lg p-4 mb-4"
+                                    placeholder="Type your message here" required></textarea>
                             <input type="submit"
-                                class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
-                                value="Submit" required>
+                                   class="w-full bg-[#292766] text-white  border border-gray-300 rounded-lg p-4 mb-4"
+                                   value="Submit" required>
                         </form>
-
-                        <div class="text-center space-y-1 mt-10">
-                            <p class="text-[#292766]">Still have questions?</p>
-                            <p>
-                                Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
-                                <span class="my-auto">or</span>
-                                <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -702,9 +481,36 @@
     </div>
 
     <script>
+        const faqs = {
+            general: {
+                left: ['Is there a free trial available?', `<p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">Yes! We offer a 14 days free trial on all plans to enable exploration of all myhomes features.</p>`],
+                right: ['Can I have multiple profiles/accounts?', `<p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;">Yes, you can have multiple profiles or accounts using the same email on myhomesng.</p>`],
+            },
+            landlord: {
+                left: ['How can I register as a Landlord?', `<p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play Store.</p> <ul> <li style="text-wrap: auto">Click "Log in" on myhomes homepage</li> <li style="text-wrap: auto">Click "Sign up" on the Log in Page</li> <li style="text-wrap: auto">Click "Continue"</li> <li style="text-wrap: auto">Fill in your details and Click "Sign up" to complete your registration.</li> </ul>`],
+                right: ['What are the KYC requirements?', '<p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p> <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p> <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p> <p style="text-wrap: auto"><b>Tier 2:</b> National Identification Number and Next of Kin</p> <p style="text-wrap: auto"><b>Tier 2:</b> Indemnity and Proof of Address</p>'],
+            },
+            agent: {
+                left: ['How do I register as an Agent?', `<p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play Store.</p> <ul> <li style="text-wrap: auto">Click "Sign Up"</li> <li style="text-wrap: auto">Select "Agent"</li> <li style="text-wrap: auto">Click "Continue," fill in your details, and complete registration.</li> </ul>`],
+                right: ['What are the KYC requirements?', `<p class="pb-1 text-gray-600" style="text-wrap: auto;">There are two levels of KYC for Agents:</p> <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p> <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p>`],
+            },
+            customers: {
+                left: ['Steps to register as a Customer', `<p class="pb-1 text-gray-600" style="text-wrap: auto;">Go to <a href="www.myhomesng.com">www.myhomesng.com</a> or download the MyHomesNG app from iOS or Google Play Store.</p> <ul> <li style="text-wrap: auto">Click "Sign Up"</li> <li style="text-wrap: auto">Select "Customer"</li> <li style="text-wrap: auto">Click "Continue," fill in your details, and sign up.</li> </ul>`],
+                right: ['What are the KYC requirements?', '<p class="pb-1 text-gray-600" style="text-wrap: auto;">There are four levels of KYC for customers:</p> <p style="text-wrap: auto"><b>Tier 1:</b> Email & phone verification</p> <p style="text-wrap: auto"><b>Tier 2:</b> BVN verification</p> <p style="text-wrap: auto"><b>Tier 3:</b> National Identification Number Verification and Next of Kin</p> <p style="text-wrap: auto"><b>Tier 4:</b> Indemnity and Proof of Address</p>'],
+            },
+            estate: {
+                left: ['What are Estates and Communities?', `<p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;"> Estates and Communities is a managed residential or commercial environment/community consisting of Facility Managers and Residents under shared infrastructures.</p>`],
+                right: ['What is an Estate ID?', `<p class="pb-1 text-gray-600 text-left" style="text-wrap: auto;"> A unique code which identifies specific estates and communities. This is required for Resident sign-up.</p>`],
+            }
+        };
+
         // Tabs
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
+        const faqLeftHeaderText = document.querySelector('.faq-left-header-text');
+        const faqLeftBodyText = document.querySelector('.faq-left-body-text');
+        const faqRightHeaderText = document.querySelector('.faq-right-header-text');
+        const faqRightBodyText = document.querySelector('.faq-right-body-text');
 
         tabButtons.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -716,12 +522,27 @@
                 btn.classList.add('bg-[#F3F3FF]', 'text-black', 'border');
                 tabContents.forEach(c => c.classList.add('hidden'));
                 document.getElementById(btn.dataset.tab).classList.remove('hidden');
+
+                const selectTab = btn.dataset.tab;
+
+                const tabGroup = faqs[selectTab];
+                const left = tabGroup.left;
+                const right = tabGroup.right;
+
+                faqLeftHeaderText.innerText = left[0];
+                faqLeftBodyText.innerHTML = "";
+                faqLeftBodyText.innerHTML = left[1];
+                faqRightHeaderText.innerText = right[0];
+                faqRightBodyText.innerText = "";
+                faqRightBodyText.insertAdjacentHTML('afterbegin', right[1]);
             });
         });
         tabButtons[0].click();
 
-        const accordionWrappers = ['#general_enquiry_button_left', '#general_enquiry_button_right', '#landlord_enquiry_button_left', '#landlord_enquiry_button_right', '#agent_enquiry_button_left', '#agent_enquiry_button_right', '#customer_enquiry_button_left', '#customer_enquiry_button_right', '#estate_enquiry_button_left', '#estate_enquiry_button_right']
+        const accordionWrappers = ['#faq_left', '#faq_right']
             .map(classListOfAccordion => document.querySelector(classListOfAccordion));
+
+        accordionWrappers[0].click();
 
         accordionWrappers.forEach(accordionWrapper => {
            accordionWrapper.addEventListener('click', () => {
