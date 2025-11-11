@@ -143,6 +143,17 @@
       .w-sm-210px {
         width: 210px;
       }
+
+      .min-w-sm-210px {
+        min-width: 210px;
+      }
+
+      .tab-content {
+        width: 100%;
+        max-width: calc((210px * 5) + (1rem * 4));
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   </style>
 </head>
@@ -215,28 +226,28 @@
   </div>
 
   <!-- Tabs & Accordions -->
-  <div class="max-w-5xl mx-auto mb-40">
+  <div class="d-flex flex-column mt-16 mx-auto">
     <!-- Tabs -->
     <div class="d-flex flex-column flex-md-row w-100 gap-4" style="overflow-x: auto">
       <button
-        class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        class="w-100 min-w-sm-210px w-sm-210px tab-button ms-auto px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
         data-tab="general">General</button>
       <button
-        class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        class="w-100 min-w-sm-210px w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
         data-tab="landlord">Landlord</button>
       <button
-        class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        class="w-100 min-w-sm-210px w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
         data-tab="agent">Agent</button>
       <button
-        class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        class="w-100 min-w-sm-210px w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
         data-tab="customers">Customers</button>
       <button
-        class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+        class="w-100 min-w-sm-210px w-sm-210px tab-button me-auto px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
         data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
     </div>
 
     <!-- Tab Content -->
-    <div>
+    <div class="d-flex w-100 mx-auto">
       <!-- General -->
       <div class="tab-content hidden" id="general">
         <div class="space-y-2 mt-5 my-0 mb-2 general single-accordion-wrapper border border-gray-400 bg-[#D4cece] rounded-lg">
