@@ -96,6 +96,21 @@
     .w-80p {
       width: 80%;
     }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .rounded-pill {
+      border-top-left-radius: 8rem;
+      border-top-right-radius: 8rem;
+      border-bottom-left-radius: 8rem;
+      border-bottom-right-radius: 8rem;
+    }
   </style>
 </head>
 
@@ -147,22 +162,22 @@
     </div>
   </nav>
 
-  <header class="w-75p my-20 mx-auto text-3xl font-extrabold leading-none tracking-tight text-[#292766] text-center text-5xl">
+  <header class="w-75p mt-20 mx-auto text-3xl font-extrabold leading-none tracking-tight text-[#292766] text-center text-5xl">
     Frequently Asked Questions
   </header>
 
   <!-- Search -->
-  <div class="search-container w-55p mx-auto flex justify-center">
-    <div class="w-full mx-auto flex justify-center mb-20 relative">
-      <div class="search-icon-container absolute left-4 top-5">
-        <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="search-container w-55p mx-auto mt-7 mb-20 flex">
+    <div class="d-flex w-full mx-auto px-5 py-2 rounded-pill bg-transparent border border-gray-300">
+      <div class="d-flex flex-column my-auto search-icon-container" style="width: fit-content; height: fit-content">
+        <svg class="d-flex" width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.3707 1.888 11.112C0.63 9.85333 0.000667196 8.316 5.29101e-07 6.5C-0.000666138 4.684 0.628667 3.14667 1.888 1.888C3.14733 0.629333 4.68467 0 6.5 0C8.31533 0 9.853 0.629333 11.113 1.888C12.373 3.14667 13.002 4.684 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5633 8.81333 11.0007 7.75067 11 6.5C10.9993 5.24933 10.562 4.187 9.688 3.313C8.814 2.439 7.75133 2.00133 6.5 2C5.24867 1.99867 4.18633 2.43633 3.313 3.313C2.43967 4.18967 2.002 5.252 2 6.5C1.998 7.748 2.43567 8.81067 3.313 9.688C4.19033 10.5653 5.25267 11.0027 6.5 11Z"
             fill="#6A6A6A" />
         </svg>
       </div>
-      <input class="w-full block transition text-base placeholder:text-base rounded-xl px-12 focus:outline-none focus:border-gray-500 py-5 bg-gray-50 border border-gray-300" type="search"
-        placeholder="Search For Keyword">
+      <input class="d-flex flex-column w-full ms-3 pe-5 rounded-pill block transition text-base placeholder:text-base rounded-pill focus:outline-none focus:border-gray-500" type="search"
+        placeholder="Search For Keyword" style="background-color: transparent">
     </div>
   </div>
 
