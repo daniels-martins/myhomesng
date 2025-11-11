@@ -34,37 +34,10 @@
 
         h2 {
             font-weight: 700;
-            /* Bold */
-        }
-
-        .semibold-callout {
-            font-weight: 600;
-        }
-
-        .medium-text {
-            font-weight: 500;
-        }
-
-        .light-text {
-            font-weight: 300;
-        }
-
-        .italic-text {
-            font-style: italic;
-            /* Will use the corresponding italic weight you imported */
-            font-weight: 400;
         }
 
         .w-100 {
             width: 100%;
-        }
-
-        .w-210px {
-            width: 210px;
-        }
-
-        .w-420px {
-            width: 420px;
         }
 
         .d-flex {
@@ -87,14 +60,25 @@
             .w-sm-210px {
                 width: 210px;
             }
+
+            .min-w-sm-210px {
+                min-width: 210px;
+            }
+
+            .tab-content {
+                width: 100%;
+                max-width: calc((210px * 5) + (1rem * 4));
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .faq-button {
+                width: calc(210px * 2 + 1rem);
+            }
         }
 
         .faq-button {
             width: 100%;
-
-            @media (min-width: 576px) {
-                width: calc(210px * 2 + 1rem);
-            }
         }
     </style>
 </head>
@@ -155,8 +139,8 @@
             <div class="search-icon-container absolute left-4 top-5">
                 <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.3707 1.888 11.112C0.63 9.85333 0.000667196 8.316 5.29101e-07 6.5C-0.000666138 4.684 0.628667 3.14667 1.888 1.888C3.14733 0.629333 4.68467 0 6.5 0C8.31533 0 9.853 0.629333 11.113 1.888C12.373 3.14667 13.002 4.684 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5633 8.81333 11.0007 7.75067 11 6.5C10.9993 5.24933 10.562 4.187 9.688 3.313C8.814 2.439 7.75133 2.00133 6.5 2C5.24867 1.99867 4.18633 2.43633 3.313 3.313C2.43967 4.18967 2.002 5.252 2 6.5C1.998 7.748 2.43567 8.81067 3.313 9.688C4.19033 10.5653 5.25267 11.0027 6.5 11Z"
-                        fill="#6A6A6A" />
+                            d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.3707 1.888 11.112C0.63 9.85333 0.000667196 8.316 5.29101e-07 6.5C-0.000666138 4.684 0.628667 3.14667 1.888 1.888C3.14733 0.629333 4.68467 0 6.5 0C8.31533 0 9.853 0.629333 11.113 1.888C12.373 3.14667 13.002 4.684 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5633 8.81333 11.0007 7.75067 11 6.5C10.9993 5.24933 10.562 4.187 9.688 3.313C8.814 2.439 7.75133 2.00133 6.5 2C5.24867 1.99867 4.18633 2.43633 3.313 3.313C2.43967 4.18967 2.002 5.252 2 6.5C1.998 7.748 2.43567 8.81067 3.313 9.688C4.19033 10.5653 5.25267 11.0027 6.5 11Z"
+                            fill="#6A6A6A" />
                 </svg>
             </div>
             <input
@@ -171,69 +155,71 @@
 
     <!-- Tabs & Accordions -->
     <!-- Tabs -->
-    <div class="d-flex flex-column mt-16 mx-auto" style="justify-self: center;">
+    <div class="d-flex flex-column mt-16 mx-auto px-2">
         <div class="d-flex flex-column flex-md-row w-100 gap-4" style="overflow-x: auto">
             <button
-                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    class="w-100 min-w-sm-210px w-sm-210px ms-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                     data-tab="general">General</button>
             <button
-                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    class="w-100 min-w-sm-210px w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                     data-tab="landlord">Landlord</button>
             <button
-                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    class="w-100 min-w-sm-210px w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                     data-tab="agent">Agent</button>
             <button
-                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    class="w-100 min-w-sm-210px w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                     data-tab="customers">Customers</button>
             <button
-                    class="w-100 w-sm-210px tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
+                    class="w-100 min-w-sm-210px w-sm-210px me-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
                     data-tab="estate">Estates&nbsp;&amp;&nbsp;Communities</button>
         </div>
 
-        <!-- FAQ BUTTONS -->
-        <div class="mt-10 flex justify-between gap-6">
-            <div id="faq_left"
-                 class="h-fit me-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out mt-5">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span class="faq-left-header-text"></span>
-
-                    <span class="ms-2" style="display: flex;">+</span>
-                </div>
-
-                <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                    <div class="pb-1 faq-left-body-text" style="text-wrap: auto;"></div>
-                </div>
-            </div>
-
-            <div id="faq_right"
-                 class="h-fit ms-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out mt-5">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span class="faq-right-header-text"></span>
-
-                    <span class="ms-2" style="display: flex;">+</span>
-                </div>
-
-                <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
-                    <div class="pb-1 faq-right-body-text" style="text-wrap: auto;"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full mt-4 flex justify-start">
-            <div class="w-full md:w-420px text-left">
-                <p class="text-[#292766]">Still have questions?</p>
-                <p>
-                    Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
-                    <span class="my-auto">or</span>
-                    <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
-                </p>
-            </div>
-        </div>
-
         <!-- Tab Content -->
-        <div class="d-flex flex-column mt-8">
+        <div class="d-flex flex-column mt-10">
             <!-- Content Template -->
             <div class="tab-content hidden w-full flex flex-column justify-center md:relative" id="general">
+                <div class="d-flex flex-column mb-5">
+                    <!-- FAQ BUTTONS -->
+                    <div class="flex flex-wrap sm:flex-nowrap flex-sm-nowrap mb-5 sm:mb-0 justify-between gap-2 sm:gap-6">
+                        <div id="faq_left"
+                             class="h-fit sm:me-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span class="faq-left-header-text"></span>
+
+                                <span class="ms-2" style="display: flex;">+</span>
+                            </div>
+
+                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                                <div class="pb-1 faq-left-body-text" style="text-wrap: auto;"></div>
+                            </div>
+                        </div>
+
+                        <div id="faq_right"
+                             class="h-fit sm:ms-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span class="faq-right-header-text"></span>
+
+                                <span class="ms-2" style="display: flex;">+</span>
+                            </div>
+
+                            <div class="hidden mt-2 max-h-0 accordion-body transition-all text-left">
+                                <div class="pb-1 faq-right-body-text" style="text-wrap: auto;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full mt-4 flex justify-start">
+                        <div class="w-full md:w-420px text-left">
+                            <p class="text-[#292766]">Still have questions?</p>
+                            <p>
+                                Find the answers to them in our <a href="faq.html" class="text-[#292766] font-bold">FAQ</a>
+                                <span class="my-auto">or</span>
+                                <a href="faq.html" class="text-[#292766] font-bold">Knowledge Base</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="space-y-4 mb-10">
                     <div uname="general-contact-form">
                         <div class="my-5 w-full">
