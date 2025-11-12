@@ -60,6 +60,10 @@
             height: 42px;
         }
 
+        .faq-button {
+            width: 100%;
+        }
+
         @media (min-width: 576px) {
             .flex-md-row {
                 flex-direction: row;
@@ -88,10 +92,6 @@
             .faq-button {
                 width: calc(210px * 2 + 1rem);
             }
-        }
-
-        .faq-button {
-            width: 100%;
         }
     </style>
 </head>
@@ -147,7 +147,7 @@
     <div class="w-full bg-[#292766] mt-20 py-3 text-white flex justify-center text-3xl mb-10">Hi, how can we help</div>
 
     <!-- Search -->
-    <div class="search-container w-55p mx-auto mt-7 mb-20 flex">
+    <div class="search-container w-55p mx-auto mt-7 mb-10 flex">
         <div class="d-flex w-full mx-auto px-5 py-2 rounded-pill bg-transparent border border-gray-300">
             <div class="d-flex flex-column my-auto search-icon-container" style="width: fit-content; height: fit-content">
                 <svg class="d-flex" width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,13 +161,9 @@
         </div>
     </div>
 
-    <header class="my-10 text-4xl  leading-none tracking-tight text-[#292766] text-center">
-        Frequently Asked Questions
-    </header>
-
     <!-- Tabs & Accordions -->
     <!-- Tabs -->
-    <div class="d-flex flex-column mt-16 mx-auto px-2">
+    <div class="d-flex flex-column mx-auto px-2">
         <div class="d-flex flex-column flex-md-row w-100 gap-4" style="overflow-x: auto">
             <button
                     class="w-100 min-w-sm-210px w-sm-210px ms-auto tab-button px-5 py-3 text-sm font-medium rounded-lg cursor-pointer transition-colors bg-[#292766] text-white hover:bg-[#D4cece] hover:text-black"
@@ -194,7 +190,7 @@
                     <!-- FAQ BUTTONS -->
                     <div class="flex flex-wrap sm:flex-nowrap flex-sm-nowrap mb-5 sm:mb-0 justify-between gap-2 sm:gap-6">
                         <div id="faq_left"
-                             class="h-fit sm:me-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out">
+                             class="h-fit sm:me-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 transition duration-200 ease-in-out">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <span class="faq-left-header-text"></span>
 
@@ -207,7 +203,7 @@
                         </div>
 
                         <div id="faq_right"
-                             class="h-fit sm:ms-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 hover:bg-gray-400/50 hover:shadow-md transition duration-200 ease-in-out">
+                             class="h-fit sm:ms-auto faq-button is-inactive text-left rounded-lg px-6 py-4 sm:py-5 font-medium cursor-pointer border-gray-300 border-2 transition duration-200 ease-in-out">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <span class="faq-right-header-text"></span>
 
